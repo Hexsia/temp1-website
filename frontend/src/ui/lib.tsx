@@ -18,3 +18,16 @@ const BigButton: React.FC<{title: string}> = ({title}) => {
 }
 
 export {BigButton}
+
+
+//Containers
+const ProductContainer: React.FC<{title: string, content: string}> = ({title, content}) => {
+    return(
+        <div className={"flex flex-col justify-around items-center space-y-45"}>
+            <h2 className={"font-bold text-5xl"}>{title}</h2>
+            <p className={"font-light"}>{content}</p>
+        </div>
+    )
+}
+
+export {ProductContainer}

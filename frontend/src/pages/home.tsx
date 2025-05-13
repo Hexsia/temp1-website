@@ -1,6 +1,10 @@
 import React from 'react'
 //UI
-import { BigButton } from "../ui/lib.tsx";
+import { BigButton, ProductContainer } from "../ui/lib.tsx";
+
+//Icons etc
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Home: React.FC = () => {
     return (
@@ -15,8 +19,10 @@ const Home: React.FC = () => {
                     <BigButton title={"Sign Up Here"}/>
                 </div>
             </div>
-            <div className={"h-150 px-10 bg-blue-50"}>
-
+            <div className={"h-150 px-10 bg-blue-50 grid grid-cols-3 justify-items-center"}>
+                <ArrowBackIosIcon sx={{dislay: "flex", justifySelf: "center", alignSelf: "center"}} />
+                <ProductContainer title={"Product One"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />
+                <ArrowForwardIosIcon sx={{dislay: "flex", justifySelf: "center", alignSelf: "center"}} />
             </div>
         </div>
     )
